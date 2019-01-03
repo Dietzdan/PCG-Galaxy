@@ -1,0 +1,8 @@
+C:\Programfiler\3dsmax6\scenes\t$m$p$$$\Scavenger.max
+C:\Programfiler\3dsmax6\scenes\t$m$p$$$\MAXFILES.TXT
+C:\Programfiler\3dsmax6\maps\Metal\Steelplt.jpg
+C:\Programfiler\3dsmax6\images\scavenger\Chassi_Ship_DIFFUSE.jpg
+C:\Programfiler\3dsmax6\images\scavenger\Chassi_Ship_SPEC.jpg
+C:\Programfiler\3dsmax6\images\scavenger\Chassi_Ship_BUMP.jpg
+C:\Programfiler\3dsmax6\maps\Metal\Uten navn.bmp
+C:\Programfiler\3dsmax6\maps\Signs\sign_tapeosha07.bmp
