@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 65210828477549394}
   - component: {fileID: 114789535096581154}
   - component: {fileID: 54911931293892264}
+  - component: {fileID: 114645817080738950}
   m_Layer: 0
   m_Name: Astrorode
   m_TagString: Untagged
@@ -130,6 +131,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114645817080738950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151198217143234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1ae60e970fbca4880222389097a91f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114789535096581154
 MonoBehaviour:
   m_ObjectHideFlags: 1

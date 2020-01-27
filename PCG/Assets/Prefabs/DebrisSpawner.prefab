@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1601418711477872}
+  m_IsPrefabParent: 1
+--- !u!1 &1601418711477872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4961648360776464}
+  - component: {fileID: 114515666753560140}
+  m_Layer: 0
+  m_Name: DebrisSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4961648360776464
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601418711477872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 184.40244, y: 10.196325, z: -16.50274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114515666753560140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601418711477872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce32155bb49d9e843858766d7b8c536f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WingDebris: {fileID: 1870119398040300, guid: d1890ad26303f3e43b0d382e0e33abfb, type: 2}
+  WingDebris2: {fileID: 1954033330745134, guid: a8baa7132e492044a9bae62ae09e7200,
+    type: 2}
+  EngineDebris: {fileID: 1360084657876814, guid: 0ca6f22483d9c0449ae64cb8f434d915,
+    type: 2}
+  EngineDebris2: {fileID: 1228926716091422, guid: 2fa5b0a73c1d8444ea4565a7a2665d01,
+    type: 2}
+  EngineDebris3: {fileID: 1252719007239128, guid: 80c47ddced506d24fba785dcfbf02598,
+    type: 2}
+  DeadShip: {fileID: 1799027859263234, guid: 04e8530b5cc61af409bda347dad39bdb, type: 2}

@@ -52,8 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Astrorode: {fileID: 1151198217143234, guid: 41a81c80e8e0e834fb4c7895a23d853d, type: 2}
-  BigShipHull: {fileID: 1538247828564220, guid: d9d9f6bec5e24b1498d73f380186c419,
-    type: 2}
-  SmallShipHull: {fileID: 1874516869364996, guid: 74c671d7e9c594242aa0a74f91a2c6b3,
-    type: 2}
-  Comets: []
+  Astrorode2: {fileID: 1459462510699546, guid: 3415ebc037d8ee34fa58cdee98fd9627, type: 2}
+  Astrorode3: {fileID: 1466554392679564, guid: 761697561291d7344bb27d5b88b717c5, type: 2}

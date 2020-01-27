@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GenerateGalaxy : MonoBehaviour {
     public GameObject Astrorode;
-    
-    
+    public GameObject Astrorode2;
+    public GameObject Astrorode3;
+
+
     //public GameObject Sphere;
     // Use this for initialization
     void Start () {
@@ -29,19 +31,34 @@ public class GenerateGalaxy : MonoBehaviour {
         float distance;
         float angle;
         float height;
-        for (int i =0; i < 300; i++)
+        for (int i =0; i < 100; i++)
         {
             angle = Random.Range(0, 360);
             distance = Random.Range(0, 20);
-            height = Random.Range(0, 10);
+            
             angle *= Mathf.Deg2Rad;
             float x = Mathf.Cos(angle) * distance;
             float z = Mathf.Sin(angle) * distance;
-            
-            
-            Instantiate(Astrorode, transform.position + new Vector3(x, height, z), Quaternion.identity);
-            
-            
+            height = Mathf.PerlinNoise(x, z)*10;
+
+            int num = Random.Range(0, 3);
+            if (num == 0)
+            {
+                Instantiate(Astrorode, transform.position + new Vector3(x, height, z), Quaternion.identity);
+            }
+
+            if (num == 1)
+            {
+                Instantiate(Astrorode2, transform.position + new Vector3(x, height, z), Quaternion.identity);
+            }
+
+            if (num == 2)
+            {
+                Instantiate(Astrorode3, transform.position + new Vector3(x, height, z), Quaternion.identity);
+            }
+
+
+
             //transform.position + new Vector3(x, 0, y);
         }
 

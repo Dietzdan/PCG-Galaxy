@@ -7,16 +7,64 @@ public class BigShipMaker : MonoBehaviour {
     public GameObject BigEngine;
     public GameObject TriEngine;
     public GameObject TwinEngine;
+    List<GameObject> Attachments = new List<GameObject>();
+    float speed = 2f;
+    Vector3 destination;
+    Vector3 OrginalPos;
+    Color randomcolor;
     // Use this for initialization
     void Start () {
-        PlaceEngine();
-	}
+
+        randomcolor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+        GetComponent<Renderer>().material.color = randomcolor;
+        for (int x = 0; x < this.transform.childCount; x++)
+        {
+            Attachments.Add(this.transform.GetChild(x).gameObject);
+        }
+        chooseEngine();
+
+        
+        OrginalPos = this.transform.position;
+        destination = CheckOverlap();
+       
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        Move(destination);
 
+        float dist = Vector3.Distance(gameObject.transform.position, destination);
+
+        if (dist < 1)
+        {
+            destination = OrginalPos;
+        }
+
+    }
+
+    Vector3 CheckOverlap()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 100);
+        
+        int x = Random.Range(0, hitColliders.Length);
+        print(hitColliders.Length);
+        //watch this while loop causes crashes
+      if (hitColliders[x].tag == "Ship" || hitColliders[x].tag == "Way")
+        {
+           x = Random.Range(0, hitColliders.Length);
+        }
+
+        return hitColliders[x].transform.position;
+
+    }
+
+    void Move(Vector3 Pos)
+    {
+        gameObject.transform.LookAt(Pos);
+        transform.Rotate(Vector3.left, 180.0f);
+        transform.position -= transform.forward * speed * Time.deltaTime;
+    }
     void PlaceEngine()
     {
         //Tri engine Vector3(0.6f,-2.1f,0.6f)
@@ -44,4 +92,35 @@ public class BigShipMaker : MonoBehaviour {
             Instantiate(TriEngine, transform.position + new Vector3(0.5f, -2.1f, 0.6f), Quaternion.identity);
         }
     }
+
+    void chooseEngine()
+    {
+        int enginetype = Random.Range(0, 3);
+        //big engine
+        if (enginetype == 0)
+        {
+            Attachments[0].GetComponent<Renderer>().material.color = randomcolor;
+            Destroy(Attachments[1]);
+            Destroy(Attachments[2]);
+        }
+        //twin
+        if (enginetype == 1)
+        {
+            Attachments[2].transform.GetChild(0).GetComponent<Renderer>().material.color = randomcolor;
+            Attachments[2].transform.GetChild(1).GetComponent<Renderer>().material.color = randomcolor;
+            Destroy(Attachments[0]);
+            Destroy(Attachments[1]);
+        }
+        //tri
+        if (enginetype == 2)
+        {
+            Attachments[1].transform.GetChild(0).GetComponent<Renderer>().material.color = randomcolor;
+            Attachments[1].transform.GetChild(1).GetComponent<Renderer>().material.color = randomcolor;
+            Attachments[1].transform.GetChild(2).GetComponent<Renderer>().material.color = randomcolor;
+            Destroy(Attachments[0]);
+            Destroy(Attachments[2]);
+        }
+
+    }
+    
 }

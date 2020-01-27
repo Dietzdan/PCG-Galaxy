@@ -6,27 +6,14 @@ public class GenerateShips : MonoBehaviour {
   
     public GameObject BigShipHull;
     public GameObject SmallShipHull;
-   
-    Vector3 Test = new Vector3(2.0f,10.0f,0.0f);
+    public GameObject Carrier;
+
+     Vector3 Test = new Vector3(1.75f,-1.0f,-4.0f);
     //public GameObject Sphere;
     // Use this for initialization
     void Start () {
 
-        //int FormationType = Random.Range(0, 2);
-        //if (FormationType == 0)
-        //{
-        //    SquareFormation();
-        //}
-        //if (FormationType == 1)
-        //{
-        //    PyramidFormation();
-        //}
-
-        MakeSmallShip();
-        
-       //add parent 
-       // GameObject.Find("Big Engine2(Clone)").transform.SetParent(GameObject.Find("ShipHull2(Clone)").transform);
-
+        MakeCarrier();
     }
 	
 	// Update is called once per frame
@@ -37,7 +24,7 @@ public class GenerateShips : MonoBehaviour {
     void MakeSmallShip()
     {
         
-        Instantiate(SmallShipHull, transform.position + Test, Quaternion.identity);
+        Instantiate(SmallShipHull, transform.position, Quaternion.identity);
         //Tri engine Vector3(0.6f,-2.1f,0.6f)
         //Twin Engine new Vector3(0.35f,-1.3f,0.6f) Ship Hull 2 Scale 1.25f Pos Vector3(0.4f,-1.75f,0.6f)
         // Twin Engine scale Engine.localScale = new Vector3(1.25f, 1.25f, 1.25f);
@@ -51,7 +38,7 @@ public class GenerateShips : MonoBehaviour {
     void MakeBigShip()
     {
 
-        Instantiate(BigShipHull, transform.position + Test, Quaternion.identity);
+        Instantiate(BigShipHull, transform.position , Quaternion.identity);
         //Tri engine Vector3(0.6f,-2.1f,0.6f)
         //Twin Engine new Vector3(0.35f,-1.3f,0.6f) Ship Hull 2 Scale 1.25f Pos Vector3(0.4f,-1.75f,0.6f)
         // Twin Engine scale Engine.localScale = new Vector3(1.25f, 1.25f, 1.25f);
@@ -63,6 +50,31 @@ public class GenerateShips : MonoBehaviour {
 
     }
 
+    void MakeCarrier()
+    {
+        Instantiate(Carrier, transform.position, Quaternion.identity);
+    }
+
+
+
+
+   public void CarrierDeploy()
+    {
+        for(int i =0;i<3;i++)
+        {
+            int shiptype = Random.Range(0, 2);
+            if(shiptype == 0)
+             {
+                MakeSmallShip();
+             }
+
+            if(shiptype == 1)
+            {
+                MakeBigShip();
+            }
+            Test.z += 2;
+        }
+    }
     void PyramidFormation()
     {
         for (int i = 0; i < 10; i++)

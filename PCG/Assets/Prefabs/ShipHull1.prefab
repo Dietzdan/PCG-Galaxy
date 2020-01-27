@@ -116,7 +116,7 @@ MonoBehaviour:
     type: 2}
   PointedRWings: {fileID: 1162441464036068, guid: 2c36390ae7a0be2408f87ddb3729de54,
     type: 2}
-  FoldWings: {fileID: 1322277807985326, guid: 11f1e690f405ac54e93b48ce3654d54a, type: 2}
+  FoldWings: {fileID: 1588981306783004, guid: e61cf1bc13bc9584bb2cbdae6ee7ceae, type: 2}
   BigEngine: {fileID: 1424050667762750, guid: 7d785b4c573336c4b96d3d4ecbd75932, type: 2}
   TriEngine: {fileID: 1002019453678438, guid: 5dcf60c29e7f5fe4b8cd37adb33b0d4c, type: 2}
   TwinEngine: {fileID: 1655692560451518, guid: d1a413991e4616441921b36c569d98a1, type: 2}

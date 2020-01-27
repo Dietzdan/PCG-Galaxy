@@ -51,7 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d34903e51799047a43bb69f6cef968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BigShipHull: {fileID: 1538247828564220, guid: d9d9f6bec5e24b1498d73f380186c419,
+  BigShipHull: {fileID: 1791459900330358, guid: 9e9e0c626bebec448800213d8560f8cd,
     type: 2}
-  SmallShipHull: {fileID: 1874516869364996, guid: 74c671d7e9c594242aa0a74f91a2c6b3,
+  SmallShipHull: {fileID: 1104724314346048, guid: 9d1e3a180ed0a8f4aa95501dd3667a2e,
     type: 2}
+  Carrier: {fileID: 1770756857497646, guid: 3e91d5fa222bdc44c8749bc19e822fa5, type: 2}

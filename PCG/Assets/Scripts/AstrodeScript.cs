@@ -11,7 +11,8 @@ public class AstrodeScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
+        
 	}
 
     private void OnTriggerEnter(Collider collision)
@@ -21,7 +22,7 @@ public class AstrodeScript : MonoBehaviour {
             //destroys if theres an overlap
             Destroy(collision.gameObject);
            
-           // this.transform.localScale += new Vector3(1.0f, 1.0f, 1.0f);
+          
         }
     }
 }
